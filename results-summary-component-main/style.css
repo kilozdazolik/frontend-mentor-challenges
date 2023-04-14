@@ -1,96 +1,172 @@
-@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
-
 :root {
   --light-red: hsl(0, 100%, 67%);
   --orangey-yellow: hsl(39, 100%, 56%);
   --green-teal: hsl(166, 100%, 37%);
   --cobalt-blue: hsl(234, 85%, 45%);
-  --pale-blue: hsl(221, 100%, 96%);
-  --light-lavender: hsl(241, 100%, 89%);
+
+  --pg-slate-blue: hsl(252, 100%, 67%);
+  --pg-royal-blue: hsl(241, 81%, 54%);
+  --primary-gradient: var(--pg-slate-blue), var(--pg-royal-blue);
+
+  --sg-violet-blue: hsla(256, 72%, 46%, 1);
+  --sg-persian-blue: hsla(241, 72%, 46%, 0);
+  --secondary-gradient: var(--sg-violet-blue), var(--sg-persian-blue);
+
   --dark-grey-blue: hsl(224, 30%, 27%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --pale-blue: hsl(221, 100%, 96%);
+}
 
-  --light-slate-blue: hsl(252, 100%, 67%);
-  --light-royal-blue: hsl(241, 81%, 54%);
+@font-face {
+  font-family: HankenGrotesk;
+  src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
 
-  --violet-blue: hsla(256, 72%, 46%, 1);
-  --persian-blue: hsla(241, 72%, 46%, 0);
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  font-family: "Hanken Grotesk", sans-serif;
-  font-size: 18px;
-}
-
-main {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-family: HankenGrotesk;
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
 }
 
 .container {
-  max-width: 1440px;
-  display: flex;
-  background-color: white;
-  box-shadow: 20px 30px 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 37rem;
   border-radius: 20px;
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0;
+    border-radius: 0;
+  }
+
+  .result {
+    border-radius: 0 0 20px 20px;
+  }
+
+  button {
+    margin-bottom: 20px;
+  }
 }
 
 .result {
-  width: 260px;
-  background-image: linear-gradient(
-    var(--light-slate-blue),
-    var(--light-royal-blue)
-  );
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-image: linear-gradient(var(--primary-gradient));
   border-radius: 20px;
+  display: grid;
+  gap: 28px;
 }
 
-.result__header {
-  padding-top: 14px;
-  font-size: 16.5px;
-  font-weight: 700;
+.section-title {
+  font-size: 1.125rem;
+  padding: 20px 20px;
+}
+
+h1 {
   color: var(--light-lavender);
 }
 
-.result__circle {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.result-circle {
+  display: grid;
+  place-content: center;
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background-image: linear-gradient(var(--violet-blue), var(--persian-blue));
+  background-image: linear-gradient(var(--secondary-gradient));
+  margin-inline: auto;
+  margin-bottom: 15px;
 }
 
-.result__circle--big-score {
-  font-size: 48px;
+.result-circle > p {
+  color: white;
+}
+
+.result-badge {
   font-weight: 800;
-  color: white;
+  font-size: 64px;
+  display: flex;
 }
 
-.result__circle--small-score {
-  font-size: 16px;
-  opacity: 50%;
+h2 {
+  color: white;
+  font-weight: 700;
+  margin-bottom: -14px;
+}
+
+.result-info {
+  color: var(--light-lavender);
+  margin: 0 42px;
+  margin-bottom: 40px;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: red;
+  border-radius: 10px;
+  padding: 15px;
+  margin-inline: 20px;
+}
+
+.summary-item > p {
   color: var(--light-lavender);
 }
 
-.result__info > h4 {
-  font-size: 26px;
-  font-weight: 500;
-  color: white;
+.summary-item > p > span {
+  font-weight: 800;
+  color: var(--dark-grey-blue);
 }
 
-.result__info > p {
-  margin-top: -22px;
-  margin-bottom: 35px;
-  width: 200px;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--light-lavender);
+.summary-item--con {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.item-reaction {
+  background-color: hsl(0, 100%, 67%, 0.1);
+  color: var(--light-red);
+}
+
+.item-memory {
+  background-color: hsl(39, 100%, 56%, 0.1);
+  color: var(--orangey-yellow);
+}
+
+.item-verbal {
+  background-color: hsl(166, 100%, 37%, 0.1);
+  color: var(--green-teal);
+}
+
+.item-visual {
+  background-color: hsl(234, 85%, 45%, 0.1);
+  color: var(--cobalt-blue);
+  margin-bottom: 12px;
+}
+
+button {
+  color: white;
+  background-color: var(--dark-grey-blue);
+  font-weight: 700;
+  border-style: none;
+  border-radius: 100vh;
+  padding: 15px;
+  margin-inline: 20px;
 }
