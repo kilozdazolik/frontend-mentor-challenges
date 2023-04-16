@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+  color: white;
+  background-color: var(--main-bg);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  background-color: var(--card-bg);
+  width: 350px;
+  border-radius: 20px;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-inline: 24px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--soft-blue);
+  margin-inline: 24px;
+}
+
+.price-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-date--eth {
+  color: var(--cyan);
+  font-weight: 600;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.price-date--clock {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.br {
+  height: 1px;
+  width: 90%;
+  margin: auto;
+  background-color: var(--line);
+}
+
+.profile {
+  display: flex;
+}
+
+.profile-name {
+  color: white;
+}
+
+#img-eth {
+  width: 300px;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin: auto;
+  margin-top: 18px;
+}
+
+.profile-avatar {
+  display: block;
+  width: 53px;
+  height: 53px;
+  border-radius: 100%;
+  box-sizing: border-box;
+  border: 1px solid white;
+}
+
+#img-avatar {
+  width: 50px;
+  height: auto;
+}
