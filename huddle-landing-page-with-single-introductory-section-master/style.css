@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 3rem;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--violet);
+  background-image: url(images/bg-desktop.svg);
+}
+
+@media screen and (max-width: 675px) {
+  body {
+    background-image: url(images/bg-mobile.svg);
+    background-repeat: no-repeat;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  footer {
+    margin: 0;
+  }
+}
+
+main {
+  display: flex;
+  gap: 3rem;
+  margin-inline: 6.5rem;
+}
+
+main > img {
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 2.5rem;
+}
+
+p {
+  color: white;
+  line-height: 1.7;
+}
+
+button {
+  padding: 0.9rem 4rem;
+  color: var(--violet);
+  font-size: 1rem;
+
+  border-radius: 100vh;
+  border: none;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+  margin-right: 6rem;
+}
+
+.facebook-icon,
+.twitter-icon,
+.instagram-icon {
+  width: 25px;
+  height: 25px;
+  padding: 0.5rem;
+  border: 1px solid white;
+  border-radius: 50%;
+  fill: white;
+  display: flex;
+  align-items: center;
+}
+
+.facebook-icon {
+  width: 15px;
+  padding: 0.5rem 0.8rem;
+}
