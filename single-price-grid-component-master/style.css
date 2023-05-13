@@ -124,7 +124,7 @@ body {
   }
   .grid {
     grid-template-columns: 1fr 1fr;
-    max-width: 800px;
+    max-width: 600px;
   }
   .community {
     grid-column: 1 / -1;
