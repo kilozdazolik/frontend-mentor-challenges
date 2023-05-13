@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --darkcyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+
+  --ff-primary: "Lexend Deca", sans-serif;
+  --ff-secondary: "Big Shoulders Display", cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-size: 0.9375rem;
+  color: var(--transparent-white);
+}
+
+.section-cars {
+  padding: 5rem 2.5rem;
+}
+
+.car {
+  padding: 2.5rem 2rem;
+}
+
+.sedans {
+  background-color: var(--bright-orange);
+  border-radius: 11px 11px 0 0;
+}
+
+.suvs {
+  background-color: var(--darkcyan);
+}
+
+.luxury {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 0 11px 11px;
+}
+
+.car img {
+  margin-bottom: 2rem;
+}
+
+.heading-primary {
+  font-family: var(--ff-secondary);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: var(--very-light-gray);
+  margin-bottom: 2rem;
+}
+
+.car-text {
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--very-light-gray);
+  padding: 1rem 2rem;
+  border-radius: 100px;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: var(--transparent-white);
+  cursor: pointer;
+}
+
+.btn-sedans {
+  color: var(--bright-orange);
+}
+
+.btn-suvs {
+  color: var(--darkcyan);
+}
+
+.btn-luxury {
+  color: var(--very-dark-cyan);
+}
+
+@media (min-width: 912px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .section-cars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 942px;
+  }
+  .sedans {
+    border-radius: 9px 0 0 9px;
+  }
+
+  .luxury {
+    border-radius: 0 9px 9px 0;
+  }
+
+  .car-text {
+    margin-bottom: 4.5rem;
+  }
+}
