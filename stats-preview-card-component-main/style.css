@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+:root {
+  --main-bg: hsl(233, 47%, 7%);
+  --card-bg: hsl(244, 38%, 16%);
+  --accent: hsl(277, 64%, 61%);
+  --accent-overlay: hsl(277, 64%, 61%, 0.4);
+
+  --main-paragraph: hsla(0, 0%, 100%, 0.75);
+  --stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9375rem;
+  color: #fff;
+  background-color: var(--main-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.grid--2-cols {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.section-componet {
+  padding: 2rem;
+}
+
+.container {
+  background-color: var(--card-bg);
+  max-width: 950px;
+  border-radius: 11px;
+}
+
+.componet-left {
+  padding: 2rem 3rem;
+}
+
+.heading {
+  font-size: 2rem;
+}
+
+.heading span {
+  color: var(--accent);
+}
+
+.componet-paragraph {
+  color: var(--main-paragraph);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.componet-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.8rem;
+  color: var(--stat-headings);
+  text-transform: uppercase;
+}
+
+.componet-text span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  text-transform: none;
+}
+
+.componet-right::before {
+  background-color: var(--accent-overlay);
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  border-radius: 0 11px 11px 0;
+}
+
+.componet-right {
+  background-image: url("./images/image-header-desktop.jpg"),
+    linear-gradient(8deg, #6db3f2, #6db3f2);
+  border-radius: 0 11px 11px 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  position: relative;
+}
+
+@media (max-width: 680px) {
+  .grid--2-cols {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .grid--3-cols {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .container {
+    max-width: 500px;
+  }
+
+  .componet-right::before {
+    border-radius: 11px 11px 0 0;
+  }
+
+  .componet-right {
+    grid-row: 1;
+    background-image: url("./images/image-header-mobile.jpg");
+    border-radius: 11px 11px 0 0;
+  }
+}
