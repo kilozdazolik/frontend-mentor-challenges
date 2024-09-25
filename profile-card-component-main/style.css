@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-blue: hsl(229, 23%, 23%);
+  --dark-gray-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 18px;
+  color: var(--very-dark-blue);
+  background-color: var(--dark-cyan);
+
+  background-image: url("images/bg-pattern-top.svg"),
+    url("images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  min-width: 35rem;
+  position: relative;
+
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card-top {
+  background: url(./images/bg-pattern-card.svg);
+
+  height: 15rem;
+}
+
+.card img {
+  position: absolute;
+  width: 10rem;
+  border-radius: 50%;
+  top: 100px;
+  left: 125px;
+  border: solid 6px white;
+}
+
+.card-body {
+  margin-top: 6.5rem;
+  text-align: center;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+h4 {
+  margin-bottom: 0.5rem;
+}
+
+span {
+  color: var(--dark-gray);
+  font-weight: lighter;
+}
+
+p {
+  font-size: 1.4rem;
+  color: var(--dark-gray-blue);
+}
+
+.card-actions {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 5rem;
+
+  text-align: center;
+}
+
+.followers-number {
+  font-size: 2rem;
+  font-weight: bold;
+
+  margin-bottom: 0.5rem;
+}
+
+.followers-text {
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+}
