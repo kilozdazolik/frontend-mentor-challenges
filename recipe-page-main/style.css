@@ -174,6 +174,7 @@ hr {
 }
 
 /* MOBILE VIEW */
+/* TODO: Finish mobile view */
 @media only screen and (max-width: 528px) {
   .container {
     min-width: 80%;
