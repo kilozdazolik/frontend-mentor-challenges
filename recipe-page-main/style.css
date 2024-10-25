@@ -184,3 +184,11 @@ hr {
     width: 100%;
   }
 }
+
+@media only screen and (max-width: 451px) {
+  .container {
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0;
+  }
+}
