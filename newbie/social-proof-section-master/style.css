@@ -55,5 +55,5 @@ body {
 .ratings-card {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 2.5rem;
 }
