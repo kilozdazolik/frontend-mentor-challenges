@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-light-pink: hsl(275, 100%, 97%);
+  --clr-grayish-purple: hsl(292, 16%, 49%);
+  --clr-dark-purple: hsl(292, 42%, 14%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Work Sans", serif;
+  font-size: 1.6rem;
+
+  background-color: var(--clr-light-pink);
+  background-image: url("assets/images/background-pattern-mobile.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+}
+
+article {
+  padding: 2.4rem;
+  border-radius: 8px;
+  background-color: var(--clr-white);
+
+  max-width: 32.7rem;
+
+  box-shadow: 0 32px 56px rgba(0, 0, 0, 0.1);
+}
+
+.article-heading {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  gap: 2rem;
+}
+
+.article-header {
+  font-weight: bolder;
+  font-size: 3.2rem;
+  color: var(--clr-dark-purple);
+}
+
+.star-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+/*FAQ Section*/
+
+.faq-dropdown {
+  margin-top: 2rem;
+}
+
+.faq-dropdown-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 2.4rem;
+}
+
+.faq-header {
+  color: var(--clr-dark-purple);
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.faq-icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.faq-icon:hover {
+  cursor: pointer;
+}
+
+.faq-content {
+  font-size: 1.4rem;
+  color: var(--clr-grayish-purple);
+  line-height: 1.5;
+}
+
+.hidden {
+  display: none;
+}
