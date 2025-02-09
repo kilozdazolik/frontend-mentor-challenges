@@ -5,6 +5,7 @@
   --clr-light-pink: hsl(275, 100%, 97%);
   --clr-grayish-purple: hsl(292, 16%, 49%);
   --clr-dark-purple: hsl(292, 42%, 14%);
+  --clr-pink: #ad28eb;
 }
 
 * {
@@ -83,6 +84,11 @@ article {
   font-size: 1.6rem;
 }
 
+.faq-header:hover {
+  cursor: pointer;
+  color: var(--clr-pink);
+}
+
 .faq-icon {
   width: 3rem;
   height: 3rem;
@@ -100,4 +106,26 @@ article {
 
 .hidden {
   display: none;
+}
+
+@media (min-width: 700px) {
+  body {
+    background-image: url("assets/images/background-pattern-desktop.svg");
+  }
+
+  article {
+    min-width: 60rem;
+    padding: 4rem;
+  }
+
+  .article-header {
+    font-weight: bolder;
+    font-size: 6.4rem;
+    color: var(--clr-dark-purple);
+  }
+
+  .star-icon {
+    width: 3.4rem;
+    height: 3.4rem;
+  }
 }
