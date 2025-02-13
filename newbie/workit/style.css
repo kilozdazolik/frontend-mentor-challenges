@@ -60,6 +60,10 @@ header {
   background-color: var(--clr-purple-900);
   height: 60rem;
   position: relative;
+
+  background-image: url(img/bg-pattern-1.svg), url(img/bg-pattern-2.svg);
+  background-repeat: no-repeat;
+  background-position: -10% 50%, 104% 80%;
 }
 
 .hero-wave {
@@ -142,4 +146,79 @@ header {
   color: var(--clr-green);
   background-color: var(--clr-purple-900);
   border: 2px solid var(--clr-green);
+}
+
+.hero-img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 5rem;
+}
+
+.hero-img {
+  position: relative;
+
+  width: 60rem;
+  min-height: 35rem;
+
+  z-index: 10;
+}
+
+section,
+.value-box-text {
+  color: var(--clr-purple-900);
+}
+
+.section-values {
+  background-color: var(--clr-purple-100);
+
+  padding-top: 40rem;
+}
+
+.values {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+
+  max-width: 80%;
+
+  margin-bottom: 20rem;
+}
+
+.value-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  max-width: 32rem;
+}
+
+.value-box-number {
+  font-size: 2.8rem;
+  margin-bottom: 5rem;
+
+  border: 1px solid var(--clr-purple-900);
+  border-radius: 50%;
+
+  width: 5rem;
+  height: 5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.value-box-header {
+  font-size: 2.4rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.value-box-text {
+  text-align: center;
+  line-height: 2;
 }
