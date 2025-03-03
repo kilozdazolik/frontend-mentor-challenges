@@ -10,19 +10,95 @@
 
   --ff-primary: "Fraunces", serif;
   --ff-secondary: "Manrope", sans-serif;
+
+  --fs-primary: 1.8rem;
+  --fs-xxl: 8rem;
+  --fs-xl: 5.6rem;
+  --fs-l: 3.2rem;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
-  outline: 1px solid #f00;
-  &:hover {
-    outline: 2px solid #f00;
-  }
 }
 
 html {
   font-size: 62.5%;
+}
+
+body {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-primary);
+  color: var(--clr-white);
+}
+
+.container {
+  max-width: 80dvw;
+  margin: 0 auto;
+}
+
+.section-hero {
+  background-color: var(--clr-purple-900);
+  text-align: center;
+}
+
+.section-header {
+  padding-top: 5.6rem;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.btn {
+  background-color: var(--clr-green);
+  color: var(--clr-purple-900);
+  padding: 1.6rem 3.1rem;
+  font-family: var(--ff-secondary);
+  font-size: 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+
+  border: 2px solid var(--clr-green);
+
+  text-decoration: none;
+
+  transition: color 0.2s linear;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--clr-white);
+  text-decoration: underline;
+  text-decoration-color: var(--clr-green);
+  text-underline-offset: 0.8rem;
+  border: none;
+}
+
+.btn-secondary:hover {
+  color: var(--clr-green);
+}
+
+.section-hero__content {
+  margin-top: 5.6rem;
+}
+
+.heading-primary {
+  font-size: var(--fs-xxl);
+  font-family: var(--ff-primary);
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 4rem;
+
+  & span {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 0.8rem;
+    text-decoration-color: var(--clr-green);
+  }
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
 }
